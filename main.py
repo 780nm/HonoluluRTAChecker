@@ -84,9 +84,12 @@ def generateFirstAvailableReport():
     for index, code in enumerate(sites):
         s.loadFirstLocationPage(code)
         appointments = s.getAppointments()
-        date = s.getDate()
-        (row,number) = appointments[index][0]
-        print(sites[code] + ": " + number + " available at " + rows[row] + " on " + date)
+        if len(appointments[index]) == 0:
+            print(sites[code] + ": None available")
+        else:
+            date = s.getDate()
+            (row,number) = appointments[index][0]
+            print(sites[code] + ": " + number + " available at " + rows[row] + " on " + date)
 
         checkReports(code, date)
 
