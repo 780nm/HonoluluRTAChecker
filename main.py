@@ -95,10 +95,6 @@ def generateFirstAvailableReport():
 
         time.sleep(0.5)
 
-def generateDateReport(date, ):
-    print("-------------------------------------------------")
-    print()
-
 #--------------------------------------------------
 # LOOP
 #--------------------------------------------------
@@ -128,8 +124,3 @@ while True:
     if alertFlag: alert()
 
     time.sleep(180)
-
-# with open("./requests_results.html", "w") as f:
-#     f.write(s.prevResp.text)
-
-# webbrowser.open("requests_results.html")
